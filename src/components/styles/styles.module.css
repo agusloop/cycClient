@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.gridMain {
+  margin-top: 2rem !important;
+}
+.formItem {
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+
+  width: 11rem;
+}
+
+.selectItem {
+  width: 150%;
+}
+
+.inputAutocomple{
+  margin-top: 0px !important;
+}
