@@ -25,7 +25,7 @@ export const Login = (props) => {
 
   //REACT EFFECTS
   useEffect(() => {
-    autenticado && props.history.push("/dashboard");
+    autenticado && props.history.push("/auth/profile");
   }, [autenticado]);
 
   //Cuando cambia el valor del input

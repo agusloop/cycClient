@@ -16,7 +16,7 @@ export const MyPhone = () => {
     <Grid container>
       <Grid md={10} spacing={8}>
         <Box textAlign='center'>
-          <Typography variant='h2'>Mis Emails</Typography>
+          <Typography variant='h2'>Mis Telefonon</Typography>
         </Box>
         <ListPhones />
       </Grid>

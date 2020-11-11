@@ -12,7 +12,6 @@ import { BusquedaSeguro } from "../components/BusquedaSeguro";
 //Estilos JS y CSS
 import { mainHomeStyles } from "./styles/MainHome";
 import homeStyles from "./styles/mainHome.module.css";
-import { AddEmail } from "../components/users/myEmail/AddEmail";
 
 export const MainHome = (props) => {
   const classes = mainHomeStyles();

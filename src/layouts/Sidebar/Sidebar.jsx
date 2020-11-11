@@ -1,5 +1,5 @@
 import React from "react";
-import navStyles from "./UserNav.module.css";
+
 import {
   List,
   ListItem,
@@ -8,15 +8,14 @@ import {
   Drawer,
 } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
-import { Grid } from "@material-ui/core";
 //ICONOS
 import EmailIcon from "@material-ui/icons/Email";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+// import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import { NavLink, withRouter } from "react-router-dom";
 
-const UserNav = (props) => {
+const Sidebar = (props) => {
   const { history, match } = props;
   const itemsList = [
     {
@@ -27,17 +26,17 @@ const UserNav = (props) => {
     {
       text: "Emails",
       icon: <EmailIcon />,
-      onClick: () => history.push("/dashboard/myemail"),
+      onClick: () => history.push("/auth/email"),
     },
     {
       text: "Telefonos",
       icon: <ContactPhoneIcon />,
-      onClick: () => history.push("/dashboard/myphone"),
+      onClick: () => history.push("/auth/telefono"),
     },
   ];
 
   return (
-    <Drawer open={true}>
+    <Drawer open={true} variant='persistent'>
       <List>
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
@@ -57,4 +56,4 @@ const UserNav = (props) => {
   );
 };
 
-export default withRouter(UserNav);
+export default withRouter(Sidebar);
