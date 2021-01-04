@@ -21,7 +21,7 @@ const Sidebar = (props) => {
     {
       text: "Mi información",
       icon: <AccountCircleIcon />,
-      onClick: () => history.push("/dashboard"),
+      onClick: () => history.push("/auth/profile"),
     },
     {
       text: "Emails",

@@ -22,7 +22,7 @@ import tokenAuth from "../../config/tokenAuth";
 const AuthState = (props) => {
   const initialState = {
     token: localStorage.getItem("x-token"),
-    autenticado: null,
+    autenticado: false,
     usuario: null,
     mensaje: null,
   };
@@ -38,7 +38,7 @@ const AuthState = (props) => {
       const res = await createUsuario(user);
 
       if (!res) {
-        dispatch({
+        return dispatch({
           type: REGISTRO_ERROR,
         });
       }
@@ -68,11 +68,12 @@ const AuthState = (props) => {
       console.log("Respuesta Autenticado", res);
 
       if (res.status !== 200) {
-        dispatch({
+        return dispatch({
           type: OBTENER_USUARIOERROR,
           payload: res.data,
         });
       }
+      console.log("Entre al exitosos");
       dispatch({
         type: OBTENER_USUARIO,
         payload: res,

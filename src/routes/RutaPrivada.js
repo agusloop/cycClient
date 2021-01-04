@@ -3,9 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import AuthContext from "../context/auth/authContext";
 
 const RutaPrivada = ({ component: Component, ...props }) => {
-  console.log("Ruta privada", props);
   const authContext = useContext(AuthContext);
-  const { autenticado, usuarioAutenticado } = authContext;
+  const { autenticado, usuarioAutenticado, usuario } = authContext;
   //Para mantener el usuario autenticado aunque se recargue la pagina
   useEffect(() => {
     usuarioAutenticado();
@@ -14,7 +13,11 @@ const RutaPrivada = ({ component: Component, ...props }) => {
     <Route
       {...props}
       render={(props) =>
-        !autenticado ? <Redirect to='/login' /> : <Component {...props} />
+        !autenticado && !usuario ? (
+          <Redirect to='/login' />
+        ) : (
+          <Component {...props} />
+        )
       }
     />
   );

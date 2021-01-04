@@ -24,9 +24,7 @@ export const MyProfile = (props) => {
     </Grid>
   ) : (
     <Grid md={10} spacing={8}>
-      <Typography variant='h2'>
-        Bienvenido {usuario.data.user_nombres}
-      </Typography>
+      <Typography variant='h2'>Bienvenido {mensaje.user_nombres}</Typography>
     </Grid>
   );
 };

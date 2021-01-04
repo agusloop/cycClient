@@ -9,7 +9,6 @@ import { CrearCuenta } from "../components/users/CrearCuenta";
 import Error404 from "../screens/Error404";
 
 export const LayoutBasic = (props) => {
-  const { routes } = props;
   return (
     <>
       <PublicNav />
@@ -25,13 +24,12 @@ export const LayoutBasic = (props) => {
           </Grid>
         </Container>
       </Container>
-      <Typography>Footer</Typography>
     </>
   );
 };
 
-function LoadRoutes({ routes }) {
-  return routes.map((r, i) => (
-    <Route key={i} path={r.path} exact={r.exact} component={r.component} />
-  ));
-}
+// function LoadRoutes({ routes }) {
+//   return routes.map((r, i) => (
+//     <Route key={i} path={r.path} exact={r.exact} component={r.component} />
+//   ));
+// }

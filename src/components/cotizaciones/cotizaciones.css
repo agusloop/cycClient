@@ -1,0 +1,8 @@
+.imgAuto {
+  background-size: auto !important;
+  height: 140px;
+}
+.mainContainer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

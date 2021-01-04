@@ -13,6 +13,9 @@ import { BusquedaSeguro } from "../components/BusquedaSeguro";
 import { mainHomeStyles } from "./styles/MainHome";
 import homeStyles from "./styles/mainHome.module.css";
 
+import { PDFViewer } from "@react-pdf/renderer";
+import Documents from "./Documents";
+
 export const MainHome = (props) => {
   const classes = mainHomeStyles();
 
@@ -21,14 +24,16 @@ export const MainHome = (props) => {
       <Grid className={classes.root}>
         <Container
           sm={4}
-          md={7}
+          md={12}
           className={[classes.image, homeStyles.full].join("")}
+          fullWidth={true}
+          maxWidth='xl'
         >
           <Typography
             component='h1'
             variant='h2'
             align='center'
-            color='textPrimary'
+            color='white'
             gutterBottom
           >
             Cotiza tu Seguro!
@@ -39,12 +44,19 @@ export const MainHome = (props) => {
             color='textSecondary'
             paragraph
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-            nihil, et soluta maiores laboriosam vero magnam blanditiis rem
-            veniam animi architecto? Velit animi quidem officiis molestias
-            perferendis excepturi laborum nobis!
+            Cotiza en segundos y contrata en minutos, todas nuestras opciones te
+            protegen con Responsabilidad Civil Obligatoria
           </Typography>
+        </Container>
+      </Grid>
+      <Grid xs={12}>
+        <Container>
           <BusquedaSeguro />
+          {/* <Container>
+            <PDFViewer width='500px' height='500px'>
+              <Documents />
+            </PDFViewer>
+          </Container> */}
         </Container>
       </Grid>
     </div>

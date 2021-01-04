@@ -52,7 +52,7 @@ export const CrearCuenta = (props) => {
   //EFFECTS
   //Validar que el usuario este autenticado
   useEffect(() => {
-    autenticado && props.history.push("/dashboard");
+    autenticado && props.history.push("/auth");
   }, [autenticado]);
 
   //Maneja la información recibida de los inputs
